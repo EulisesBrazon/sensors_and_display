@@ -52,9 +52,9 @@ def readDistance():
 
 def seeDate():
     
-    size=2
-    separation = 4
-    h=0
+    size=2 #font size
+    separation = 4 #separation between each line
+    h=0 #height
     
     #data reading
     temperature = str(round(readTemperature(), 2))
@@ -64,9 +64,9 @@ def seeDate():
     
     tft.fill(TFT.BLACK)#clean screen
     
-    tft.text((0, h), "Temperatura:", TFT.RED, sysfont, size, nowrap=True)
+    tft.text((0, h), "Temperatura:", TFT.RED, sysfont, size, nowrap=True)#printing on screen
     
-    h += sysfont["Height"]*size+separation
+    h += sysfont["Height"]*size+separation #recalculated height
     tft.text((0, h), temperature+"C", TFT.BLUE, sysfont, size, nowrap=True)
     
     h += sysfont["Height"]*size+separation
